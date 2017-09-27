@@ -14,6 +14,7 @@ public class Main {
         System.out.println(findLargest(list));
         System.out.println(findSmallestIndex(list));
         System.out.println(listPrinter(randomShuffling(list)));
+        System.out.println(listPrinter(shiftElements(list, 2)));
 
         System.out.println("**********");
 
@@ -24,6 +25,7 @@ public class Main {
         System.out.println(findLargest(userList));
         System.out.println(findSmallestIndex(userList));
         System.out.println(listPrinter(randomShuffling(userList)));
+        System.out.println(listPrinter(shiftElements(userList, 2)));
     }
 
     public static int[] makeList(int arrayLength) {
@@ -91,6 +93,17 @@ public class Main {
             array[index] = array[i];
             array[i] = temp;
         }
+        return array;
+    }
+
+
+    public static int[] shiftElements(int[] array, int shiftingNum) {
+        int index, temp;
+        for (int i = array.length - 1; i >= 0; i--) {
+            index = shiftingNum;
+            temp = array[index];
+            array[index] = array[i];
+            array[i] = temp;}
         return array;
     }
 
