@@ -34,16 +34,26 @@ public class Main {
 
         // this comment means this section tests out the methods for the user input created array
         // user input list:
+        // initializes the array "list" with the makeList method that requires a length number
         int[] userList = makeList(5);
+        // this prints out the array "userList" (or else you get the address where it lives in the heap
         System.out.println(listPrinter(userList));
+        // prints the sum of our userList array
         System.out.println(sumAllElements(userList));
+        // prints out the largest element in the userList
         System.out.println(findLargest(userList));
+        // this prints the smallest index (and first) of the largest number in the userList array
         System.out.println(findSmallestIndex(userList));
+        // this prints out the randomly shuffled userList array
         System.out.println(listPrinter(randomShuffling(userList)));
+        // prints out the userList array after it is shifted according to the shiftingNum param
         System.out.println(listPrinter(shiftElements(userList, 2)));
 
+        // this is how I separate sections so there isn't a solid block of results
         System.out.println("**********");
 
+        // this is the answer to the bonus question. I decided to println descriptive statements for the results
+            // so it was easier to follow and test out.
         bonusMark();
     }
 
