@@ -162,7 +162,7 @@ public class Main {
         Random random = new Random();
         // unlike the earlier for loops, we are going backwards
         for (int i = array.length - 1; i > 0; i--) {
-            // the index variable with be number from 1 to whatever the array length is
+            // the index variable will be a random number from 0 to array.length + 1
             index = random.nextInt(i + 1);
             // temp will hold the array at index = to random int
             temp = array[index];
