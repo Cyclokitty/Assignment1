@@ -119,13 +119,19 @@ public class Main {
         return total;
     }
 
+    // finding the largest element and returning that element
     public static int findLargest(int[] array) {
+        // initialize largest and assign 0. Use this to compare to other numbers in the array
         int largest = 0;
+        // our for loop to loop thru the elements
         for (int i = 0; i < array.length; i++) {
+            // if the current element is larger than the value in largest
             if (array[i] > largest) {
+                // we assign that value to largest
                 largest = array[i];
             }
         }
+        // once thru the loop we return the value in largest variable
         return largest;
     }
 
