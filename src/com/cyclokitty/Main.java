@@ -26,6 +26,10 @@ public class Main {
         System.out.println(findSmallestIndex(userList));
         System.out.println(listPrinter(randomShuffling(userList)));
         System.out.println(listPrinter(shiftElements(userList, 2)));
+
+        System.out.println("**********");
+
+        bonusMark();
     }
 
     public static int[] makeList(int arrayLength) {
@@ -105,6 +109,25 @@ public class Main {
             array[index] = array[i];
             array[i] = temp;}
         return array;
+    }
+
+    public static void bonusMark() {
+        int[] list = makeRandomList(100);
+        int counter = 0;
+        int total = 0;
+        for (int i = 0; i < list.length; i++) {
+            total += list[i];
+        }
+        int average = total / list.length;
+        for (int i = 0; i < list.length; i++) {
+            if (list[i] > average) {
+                counter++;
+            }
+        }
+        System.out.println("This is the list we randomly created: ");
+        System.out.println(listPrinter(list));
+        System.out.println("The average is " + average);
+        System.out.println("The number of ints in our random list that is above the average is: " + counter);
     }
 
 }
