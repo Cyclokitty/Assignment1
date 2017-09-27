@@ -106,11 +106,16 @@ public class Main {
         return Arrays.toString(array);
     }
 
+    // summing all elements and return the final sum
     public static int sumAllElements(int[] array) {
+        // initializing total and assigning 0 to it
         int total = 0;
+        // for loop to loop thru the integers in the array
         for (int i = 0; i < array.length; i++) {
+            // each integer is added to the result in total
             total += array[i];
         }
+        // returning the total
         return total;
     }
 
