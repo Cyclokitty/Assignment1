@@ -175,14 +175,22 @@ public class Main {
         return array;
     }
 
-
+    // shifting elements in the array according to a number chosen by the user and returns that shuffled array
     public static int[] shiftElements(int[] array, int shiftingNum) {
+        // we initialize the variables index and temp
         int index, temp;
+        // we loop backwards thru the array and make sure we reach the 0 index
         for (int i = array.length - 1; i >= 0; i--) {
+            // the index equals the shiftingNum parameter
             index = shiftingNum;
+            // we hold the value of the array[index] in the temp variable
             temp = array[index];
+            // we assign array[index] the value of the current index
             array[index] = array[i];
-            array[i] = temp;}
+            // and then assign the temp value to the current idnex
+            array[i] = temp;
+        }
+        // return the shifted array
         return array;
     }
 
