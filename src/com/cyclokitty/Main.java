@@ -154,15 +154,24 @@ public class Main {
         return -1;
     }
 
+    // random shuffling and returns the newly shuffled array
     public static int[] randomShuffling(int[] array) {
+        // we initialze the variables index and temp
         int index, temp;
+        // we want to have a randomly selected number to shift elements in the array so we initialize the random constructor
         Random random = new Random();
+        // unlike the earlier for loops, we are going backwards
         for (int i = array.length - 1; i > 0; i--) {
+            // the index variable with be number from 1 to whatever the array length is
             index = random.nextInt(i + 1);
+            // temp will hold the array at index = to random int
             temp = array[index];
+            // then we make the array at the random index = the current index
             array[index] = array[i];
+            // then the current index will get the temp value
             array[i] = temp;
         }
+        // we return the array
         return array;
     }
 
