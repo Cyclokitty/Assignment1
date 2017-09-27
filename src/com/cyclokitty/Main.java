@@ -135,13 +135,22 @@ public class Main {
         return largest;
     }
 
+    // finding the smallest index of the largest element and returning that element
     public static int findSmallestIndex(int[] array) {
+        // we initialize largest variable
+        // since we already made a method that finds the largest element, we don't repeat the same blocks of code
+        // instead we assign largest to the method findLargest(array) and let it do the work
         int largest = findLargest(array);
+        // now that we have the largest number we use a for loop to go thru the contents of the array
         for (int i = 0; i < array.length; i++) {
+            // if the current integer in the array is equal to the value in largest
             if (array[i] == largest) {
+                // we return that index. Since we only want the first one, we return that index to exit the method
                 return i;
             }
         }
+        // since we have to return something, -1 means something in our code has failed. -1 will let us know we have
+        // made an error in logic
         return -1;
     }
 
