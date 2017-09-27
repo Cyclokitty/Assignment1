@@ -13,6 +13,7 @@ public class Main {
         System.out.println(sumAllElements(list));
         System.out.println(findLargest(list));
         System.out.println(findSmallestIndex(list));
+        System.out.println(listPrinter(randomShuffling(list)));
 
         System.out.println("**********");
 
@@ -22,6 +23,7 @@ public class Main {
         System.out.println(sumAllElements(userList));
         System.out.println(findLargest(userList));
         System.out.println(findSmallestIndex(userList));
+        System.out.println(listPrinter(randomShuffling(userList)));
     }
 
     public static int[] makeList(int arrayLength) {
@@ -80,6 +82,16 @@ public class Main {
         return -1;
     }
 
-   
+    public static int[] randomShuffling(int[] array) {
+        int index, temp;
+        Random random = new Random();
+        for (int i = array.length - 1; i > 0; i--) {
+            index = random.nextInt(i + 1);
+            temp = array[index];
+            array[index] = array[i];
+            array[i] = temp;
+        }
+        return array;
+    }
 
 }
