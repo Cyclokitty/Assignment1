@@ -57,10 +57,14 @@ public class Main {
         bonusMark();
     }
 
+    // this method initialing arrays with input values. It returns an array.
     public static int[] makeList(int arrayLength) {
+        // initializing the array with a length chosen by user
         int[] data = new int[arrayLength];
+        // using Scanner class to collect the user input integers
         Scanner scan = new Scanner(System.in);
-        System.out.println("Please enter your ten favourite integers.");
+        // instructing the user
+        System.out.println("Please enter your favourite integers.");
         int count = 0;
         while (count < data.length) {
             System.out.print("Enter number: ");
