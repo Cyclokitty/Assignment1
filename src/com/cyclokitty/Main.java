@@ -1,23 +1,38 @@
 package com.cyclokitty;
 
+// import Arrays to print out array nicely
 import java.util.Arrays;
+// import Random to create random numbers in the arrays
 import java.util.Random;
+// import Scanner to get input from a user
 import java.util.Scanner;
 
+// the main class in this project
 public class Main {
-
+    // the compiler looks for "main" to begin
     public static void main(String[] args) {
+        // this comment means this section tests out the methods for the randomly created array
         // randomly created list:
+        // initializes the array "list" with the makeRandomList method that requires a length number
         int[] list = makeRandomList(5);
+        // this prints out the random list using our listPrinter array (or else you just get the address
+            // in the heap for the array
         System.out.println(listPrinter(list));
+        // this prints the sum in our random list
         System.out.println(sumAllElements(list));
+        // this prints the largest element in our random list
         System.out.println(findLargest(list));
+        // this prints the smallest index (and the first) in our random list
         System.out.println(findSmallestIndex(list));
+        // printing out the randomly shuffled list
         System.out.println(listPrinter(randomShuffling(list)));
+        // printing out the shifted element list
         System.out.println(listPrinter(shiftElements(list, 2)));
 
+        // this is how I separate sections so there isn't a solid block of results
         System.out.println("**********");
 
+        // this comment means this section tests out the methods for the user input created array
         // user input list:
         int[] userList = makeList(5);
         System.out.println(listPrinter(userList));
