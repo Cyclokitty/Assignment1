@@ -194,23 +194,38 @@ public class Main {
         return array;
     }
 
+    // the bonus question that asks us to create an array from 100 random ints
     public static void bonusMark() {
+        // since we already have a method that can create an array filled with random ints, we initialize a new
+        // int[] array with the method makeRandomList(100)
         int[] list = makeRandomList(100);
+        // initialize a counter variable with 0. We will count the number of ints in the random list above the average
         int counter = 0;
+        // initialize a total variable with 0.
         int total = 0;
+        // we loop thru the array
         for (int i = 0; i < list.length; i++) {
+            // we add the current element and assign that new value to total
             total += list[i];
         }
+        // initialize variable average and assign it the value of total divided by the length of list
         int average = total / list.length;
+        // now we loop thru the array and compare
         for (int i = 0; i < list.length; i++) {
+            // we compare the current element and find out if it is greater than the average
             if (list[i] > average) {
+                // if the current element is greater than the average then we add 1 to the counter variable
                 counter++;
             }
         }
+        // we give information to the user about our random list
         System.out.println("This is the list we randomly created: ");
+        // here we print the random list using our listPrinter method
         System.out.println(listPrinter(list));
+        // we give the user the average in our random list
         System.out.println("The average is " + average);
-        System.out.println("The number of ints in our random list that is above the average is: " + counter);
+        // and finally give the user how many elements in our random list are greater than the average
+        System.out.println("The number of ints in our random list that are above the average is: " + counter);
     }
 
 }
