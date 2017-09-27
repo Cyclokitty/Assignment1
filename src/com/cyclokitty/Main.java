@@ -99,7 +99,10 @@ public class Main {
         return data;
     }
 
+    // printing arrays. this returns a String of the array
     public static String listPrinter(int[] array) {
+        // I could have printed out each int in the array but wanted a more natural looking, horizontal arrangement
+        // the Arrays.toString() does that really nicely
         return Arrays.toString(array);
     }
 
