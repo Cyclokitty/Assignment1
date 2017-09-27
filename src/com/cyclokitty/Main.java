@@ -82,13 +82,20 @@ public class Main {
         return data;
     }
 
+    // initializing arrays with random values. It returns an array.
     public static int[] makeRandomList(int arrayLength) {
+        // we initialize a Random constructor so we can use it's methods to create random integers
         Random rand = new Random();
+        // initialize an array with a length chosen by the user
         int[] data = new int[arrayLength];
+        // a for loop that'll loop thru the array that is currently filled with 0s.
         for (int i = 0; i < data.length; i++) {
+            // a new random integer (from a range of 1 to 100)
             int newNum = rand.nextInt(100) + 1;
+            // assigning the integer to the current index in the array
             data[i] = newNum;
         }
+        // once the random array is completed we return it
         return data;
     }
 
