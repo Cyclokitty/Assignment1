@@ -65,13 +65,20 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         // instructing the user
         System.out.println("Please enter your favourite integers.");
+        // initializing the variable count to 0. We'll use it to keep track of integers entered by the user
         int count = 0;
+        // while loop making sure we collect no more than the arrayLength specified
         while (count < data.length) {
+            // Reminding the user what we want from them
             System.out.print("Enter number: ");
+            // assigning the user's number to variable input
             String input = scan.nextLine();
+            // assigning the input to the next place in the array and turning it from a string to an integer
             data[count] = Integer.parseInt(input);
+            // advancing the while by 1 or else we get caught in an endless loop
             count++;
         }
+        // once we've collected and assigned the user's input we return the array
         return data;
     }
 
